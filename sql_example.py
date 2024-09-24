@@ -57,3 +57,10 @@ cursor.execute(read_query)
 data = cursor.fetchall()
 print(data)
 
+
+# updating data to database table
+sql_command = """
+    UPDATE user SET name="Hari" WHERE id=1;
+"""
+cursor.execute(sql_command)
+sqlConn.commit()
